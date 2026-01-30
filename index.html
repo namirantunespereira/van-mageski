@@ -3,229 +3,146 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Van Mageski — Arte feita a partir da escuta</title>
-  <meta name="description" content="Tatuagem autoral com intenção, escuta e cuidado." />
-  <link rel="stylesheet" href="css/tokens.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Van Mageski — Tatuagem Autoral & Estética</title>
+  <meta name="description" content="Tatuagem autoral (fineline, sketch, escrita, coberturas) e estética/paramédica com técnica, escuta e precisão. Vitória/ES." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=20260130125724">
+  <meta name="theme-color" content="#1F180A">
 </head>
-<body>
+<body class="has-bg-video">
+  <!-- BG VIDEO FIXO -->
+  <video class="site-bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/bg.mp4" type="video/mp4">
+  </video>
+  <div class="site-bg-overlay" aria-hidden="true"></div>
 
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Navegação principal">
-      <div class="brand">Van Mageski</div>
-      <ul>
-        <li><a href="#inicio" data-scroll class="active">Início</a></li>
-        <li><a href="#sobre" data-scroll>Sobre</a></li>
-        <li><a href="#portfolio" data-scroll>Portfólio</a></li>
-        <li><a href="#depoimentos" data-scroll>Depoimentos</a></li>
-        <li><a href="#agenda" data-scroll>Agendar</a></li>
-      </ul>
-      <a class="btn primary" href="#agenda" data-scroll>Agendar sessão</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO / Início -->
-  <section id="inicio">
-    <div class="container">
-      <div class="collage">
-
-        <div class="card pad span-6">
-          <div class="kicker">Tatuagem autoral</div>
-          <h1>Arte feita a partir da escuta</h1>
-          <p class="lead">Uma estética madura, calma e precisa — onde cada traço nasce da conversa, do cuidado e da intenção.</p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px">
-            <a class="btn primary" href="#agenda" data-scroll>Agendar sessão</a>
-            <a class="btn" href="#portfolio" data-scroll>Ver portfólio</a>
-          </div>
+  <!-- HERO -->
+  <section id="inicio" class="hero section-3d bg-fern">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="kicker">Tatuagem autoral • fineline</div>
+        <h1>Van Mageski</h1>
+        <p class="lead">Linhas precisas e decisões claras. Projetos pensados caso a caso.</p>
+        <div class="actions">
+          <a class="btn" href="#portfolio">Conheça meu trabalho</a>
+          <a class="btn primary" href="#agenda">Agende sua sessão</a>
         </div>
-
-        <div class="card span-6 tall">
-          <img src="assets/img/ph-1.jpg" alt="Imagem inspiracional em tons naturais" loading="lazy" />
+        <div class="quick-links">
+          <a class="link" href="#portfolio">Portfólio</a>
+          <a class="link" href="#depoimentos">Depoimentos</a>
+          <a class="link" href="#agenda">Agenda</a>
         </div>
-
-        <div class="card light pad span-4 medium">
-          <div class="kicker">Ritual</div>
-          <h3>Sem pressa.</h3>
-          <p style="margin:0; line-height:1.6">A sessão é construída em camadas: ideia → alinhamento → desenho → pele. Tudo com presença.</p>
-        </div>
-
-        <div class="card span-4 medium">
-          <img src="assets/img/ph-2.jpg" alt="Textura e luz suave" loading="lazy" />
-        </div>
-
-        <div class="card pad span-4 medium">
-          <div class="kicker">Assinatura</div>
-          <h3>Linhas finas, respiro e intenção.</h3>
-          <p style="margin:0; line-height:1.6">Um estilo que valoriza o vazio, o silêncio e o que fica depois do olhar.</p>
-        </div>
-
       </div>
+      <figure class="hero-image">
+        <img src="assets/img/hero-still.jpg" alt="Imagem de apoio no hero" loading="lazy" decoding="async">
+      </figure>
     </div>
   </section>
 
+  <!-- NAV -->
+  <nav class="nav-main under-hero" aria-label="Principal">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio">Van Mageski</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+      <a class="btn primary nav-cta" href="#agenda">Agendar sessão</a>
+    </div>
+  </nav>
+
   <!-- SOBRE -->
-  <section id="sobre">
-    <div class="container">
-      <div class="collage">
-        <div class="card span-7 tall">
-          <img src="assets/img/ph-3.jpg" alt="Fotografia em tons orgânicos" loading="lazy" />
-        </div>
-        <div class="card light pad span-5 tall">
-          <div class="kicker">Sobre</div>
-          <h2>Uma artista com linguagem própria</h2>
-          <p style="margin:0; line-height:1.65">
-            Texto autoral (placeholder). Aqui entra uma narrativa íntima: por que tatuar, como escuta, o que acredita e como cuida.
-            <br><br>
-            <strong>Valores</strong>: arte • escuta • cuidado • técnica.
-          </p>
-          <div style="margin-top:18px">
-            <a class="btn" href="#agenda" data-scroll>Conversar sobre meu projeto</a>
-          </div>
-        </div>
+  <section id="sobre" class="section-3d bg-moss">
+    <div class="container sobre-grid">
+      <div>
+        <h2>Sobre</h2>
+        <p class="lead">Meu trabalho começa na escuta. Antes do desenho, existe uma conversa sobre intenção, forma e limites. Cada tatuagem é pensada caso a caso — sem pressa, com técnica e cuidado à pele.</p>
+        <ul class="bullets">
+          <li>Valores & propósito: arte, escuta, cuidado, técnica.</li>
+          <li>Diferenciais: briefing prévio, exclusividade, foco em estética e saúde da pele.</li>
+          <li>Atendimento com hora marcada, ambiente seguro e esterilizado.</li>
+        </ul>
       </div>
+      <div class="card-img" aria-hidden="true" style="min-height: 320px"></div>
     </div>
   </section>
 
   <!-- PORTFÓLIO -->
-  <section id="portfolio">
+  <section id="portfolio" class="section-3d bg-taupe">
     <div class="container">
-      <div class="kicker">Portfólio</div>
-      <h2>Trabalhos selecionados</h2>
-      <p class="lead">Pouco, bom e com respiro — cada peça como uma pequena obra.</p>
-
-      <div class="chips" role="toolbar" aria-label="Filtros do portfólio">
-        <button class="chip" type="button" aria-pressed="true" data-filter="tudo">Tudo</button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="fineline">Fineline</button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="sketch">Sketch</button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="escrita">Escrita</button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="cobertura">Coberturas</button>
-        <button class="chip" type="button" aria-pressed="false" data-filter="estetica">Estética/Paramédica</button>
+      <h2>Portfólio</h2>
+      <div class="ig-carousel" aria-label="Carrossel de portfólio">
+        <button class="ig-nav prev" aria-label="Anterior" hidden>‹</button>
+        <div id="ig-track" class="ig-track" aria-live="polite"></div>
+        <button class="ig-nav next" aria-label="Próximo" hidden>›</button>
       </div>
-
-      <div class="gallery" aria-label="Galeria de imagens">
-        <a href="#" data-cat="fineline,escrita" data-title="Peça 01" data-desc="Descrição curta da intenção da peça."><img src="assets/img/ph-4.jpg" alt="Peça do portfólio" loading="lazy"></a>
-        <a href="#" data-cat="sketch" data-title="Peça 02" data-desc="Descrição curta da intenção da peça."><img src="assets/img/ph-5.jpg" alt="Peça do portfólio" loading="lazy"></a>
-        <a href="#" data-cat="fineline" data-title="Peça 03" data-desc="Descrição curta da intenção da peça."><img src="assets/img/ph-6.jpg" alt="Peça do portfólio" loading="lazy"></a>
-        <a href="#" data-cat="cobertura" data-title="Peça 04" data-desc="Descrição curta da intenção da peça."><img src="assets/img/ph-2.jpg" alt="Peça do portfólio" loading="lazy"></a>
-        <a href="#" data-cat="estetica" data-title="Peça 05" data-desc="Antes/depois com cuidado e respeito (placeholder)."><img src="assets/img/ph-3.jpg" alt="Peça do portfólio" loading="lazy"></a>
-        <a href="#" data-cat="escrita" data-title="Peça 06" data-desc="Descrição curta da intenção da peça."><img src="assets/img/ph-1.jpg" alt="Peça do portfólio" loading="lazy"></a>
-      </div>
-
-      <div style="margin-top:18px">
-        <a class="btn primary" href="#agenda" data-scroll>Quero agendar</a>
-      </div>
+      <p id="ig-fallback" class="ig-fallback" hidden>
+        Adicione suas imagens em <code>assets/img/ph-1.jpg</code> até <code>ph-6.jpg</code>.
+      </p>
     </div>
   </section>
 
   <!-- DEPOIMENTOS -->
-  <section id="depoimentos">
+  <section id="depoimentos" class="section-3d bg-gold">
     <div class="container">
-      <div class="kicker">Depoimentos</div>
-      <h2>O que dizem depois da sessão</h2>
-      <div class="quotes">
-        <div class="quote">
-          <p>“Me senti respeitada do início ao fim. Saí com a tatuagem e com uma paz que eu não esperava.”</p>
-          <div class="who">Cliente — Vitória/ES</div>
-        </div>
-        <div class="quote">
-          <p>“A conversa foi parte da arte. A tatuagem ficou leve, com espaço. Parece que sempre esteve ali.”</p>
-          <div class="who">Cliente — Serra/ES</div>
-        </div>
-        <div class="quote">
-          <p>“Cuidado real: higiene impecável, mão firme e uma sensibilidade rara. Recomendo de olhos fechados.”</p>
-          <div class="who">Cliente — Vila Velha/ES</div>
-        </div>
-        <div class="quote">
-          <p>“Não é sobre tatuar rápido — é sobre tatuar certo. Uma experiência muito bonita.”</p>
-          <div class="who">Cliente — Cariacica/ES</div>
+      <h2>Depoimentos</h2>
+      <div class="t-carousel" aria-label="Carrossel de depoimentos">
+        <div id="t-track" class="t-track" aria-live="polite">
+          <article class="quote t-card"><p>Experiência impecável! A Van traduziu exatamente o que eu imaginava.</p><div class="who">Cliente</div></article>
+          <article class="quote t-card"><p>Delicadeza no traço e cuidado no atendimento — recomendo muito.</p><div class="who">Cliente</div></article>
+          <article class="quote t-card"><p>Traço leve e atendimento acolhedor. Voltarei com certeza.</p><div class="who">Cliente</div></article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AGENDA / CONTATO -->
-  <section id="agenda">
+  <!-- AGENDA -->
+  <section id="agenda" class="section-3d bg-cedar">
     <div class="container">
-      <div class="collage">
-        <div class="card pad span-6">
-          <div class="kicker">Agendar sessão</div>
-          <h2>Cada projeto começa com uma conversa</h2>
-          <p class="lead">Envie sua ideia com calma. Eu retorno com próximos passos, valores e disponibilidade.</p>
-          <form>
-            <div class="field"><label>Nome</label><input placeholder="Seu nome" /></div>
-            <div class="field"><label>Contato</label><input placeholder="WhatsApp ou e-mail" /></div>
-            <div class="field"><label>Tipo de serviço</label>
-              <select>
-                <option>Fineline</option>
-                <option>Sketch</option>
-                <option>Escrita delicada</option>
-                <option>Cobertura</option>
-                <option>Estética/Paramédica</option>
-              </select>
-            </div>
-            <div class="field"><label>Local do corpo</label><input placeholder="Ex.: antebraço" /></div>
-            <div class="field full"><label>Ideia / intenção</label><textarea placeholder="Conte um pouco sobre o que você quer e por quê..."></textarea></div>
-            <div class="field full" style="display:flex; gap:12px; flex-direction:row; flex-wrap:wrap; align-items:center">
-              <button class="btn primary" type="button">Enviar pedido</button>
-              <a class="btn" href="#" aria-label="WhatsApp">WhatsApp</a>
-              <a class="btn" href="#" aria-label="Instagram">Instagram</a>
-            </div>
-          </form>
-        </div>
-        <div class="card span-6 tall">
-          <img src="assets/img/ph-5.jpg" alt="Imagem de apoio" loading="lazy" />
-        </div>
-      </div>
+      <h2>Agenda</h2>
+      <p class="lead">Preencha os dados abaixo. Você será redirecionado após enviar.</p>
+      <form id="agenda-form" novalidate>
+        <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Seu nome completo" required></div>
+        <div class="field"><label for="contato">Contato</label><input id="contato" name="contato" type="text" placeholder="WhatsApp ou e-mail" required></div>
+        <div class="field"><label for="tipo">Tipo de tatuagem</label><select id="tipo" name="tipo" required><option value="">Selecione…</option><option>Fineline</option><option>Sketch</option><option>Escrita</option><option>Cobertura</option><option>Paramédica/Estética</option></select></div>
+        <div class="field"><label for="local">Local no corpo</label><input id="local" name="local" type="text" placeholder="Ex.: antebraço, clavícula"></div>
+        <div class="field full"><label for="ideia">Ideia (resumo)</label><textarea id="ideia" name="ideia" placeholder="Conte a ideia em poucas linhas"></textarea></div>
+        <div class="actions"><button type="submit" class="btn primary">Enviar formulário</button></div>
+      </form>
     </div>
   </section>
 
-  <!-- BLOG (opcional) -->
-  <section id="blog">
+  <!-- BLOG -->
+  <section id="blog" class="section-3d bg-ochre">
     <div class="container">
-      <div class="kicker">Blog</div>
-      <h2>Textos e cuidados</h2>
-      <div class="gallery" style="margin-top:22px">
-        <a href="#"><img src="assets/img/ph-6.jpg" alt="Artigo" loading="lazy"></a>
-        <a href="#"><img src="assets/img/ph-4.jpg" alt="Artigo" loading="lazy"></a>
-        <a href="#"><img src="assets/img/ph-1.jpg" alt="Artigo" loading="lazy"></a>
-      </div>
+      <h2>Blog</h2>
+      <p class="lead">Em breve.</p>
     </div>
   </section>
 
-</main>
-
-<footer class="footer">
-  <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap">
-    <div class="sig">Van Mageski</div>
-    <div style="font-size:12px; opacity:.7">© <span id="y"></span> • Arte, escuta e cuidado.</div>
-  </div>
-</footer>
-
-<!-- Modal portfólio -->
-<div class="modal" aria-hidden="true" aria-label="Visualizador de imagem">
-  <div class="box" role="dialog" aria-modal="true">
-    <header>
-      <div class="title">Portfólio</div>
-      <button type="button" data-close aria-label="Fechar">Fechar</button>
-    </header>
-    <div class="content">
-      <img src="assets/img/ph-1.jpg" alt="Imagem ampliada" />
-      <div class="meta">
-        <div class="kicker">Detalhes</div>
-        <p data-desc>Descrição curta da peça e intenção artística.</p>
-        <a class="btn primary" href="#agenda" data-scroll>Agendar sessão</a>
-      </div>
+  <!-- RODAPÉ (transparente, texto visível) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © 2026 Van Mageski — <a class="link" href="https://instagram.com/van.mageski" target="_blank" rel="noopener">@van.mageski</a>
+        <br>
+        <small class="footer-credit">Designed by <a class="link" href="https://github.com/namirantunespereira" target="_blank" rel="noopener">Namir Antunes</a></small>
+      </p>
     </div>
-  </div>
-</div>
+  </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-<script src="js/main.js"></script>
+  <!-- WhatsApp flutuante -->
+  <a id="float-whats" class="whatsapp-float" href="https://wa.me/5527999930338" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.17c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.62.14-.18.27-.71.88-.87 1.06-.16.18-.32.2-.6.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.33-1.58-1.49-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.49.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.49-.07-.14-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.46h-.53c-.18 0-.49.07-.75.34-.25.27-.98.96-.98 2.35s1.01 2.72 1.15 2.9c.14.18 1.98 3.03 4.8 4.25.67.29 1.19.46 1.59.59.67.21 1.27.18 1.75.11.53-.08 1.6-.65 1.83-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32zM16.02 3.2c-7.09 0-12.84 5.75-12.84 12.84 0 2.27.6 4.41 1.66 6.26L3.2 28.8l6.7-1.6c1.79.98 3.83 1.54 6.01 1.54 7.09 0 12.84-5.75 12.84-12.84S23.11 3.2 16.02 3.2zm7.51 20.35c-1.99 1.99-4.64 3.08-7.51 3.08-2.09 0-4.05-.6-5.71-1.65l-.41-.26-3.98.95.95-3.88-.27-.4c-1.12-1.74-1.72-3.76-1.72-5.84 0-2.87 1.12-5.52 3.08-7.51 1.99-1.99 4.64-3.08 7.51-3.08s5.52 1.12 7.51 3.08c1.99 1.99 3.08 4.64 3.08 7.51s-1.09 5.52-3.08 7.51z"/></svg>
+  </a>
+
+  <script src="assets/js/instagram-proxy.js" defer></script>
+  <script src="assets/js/testimonials.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
 </body>
 </html>
