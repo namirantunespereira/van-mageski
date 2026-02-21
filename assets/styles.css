@@ -253,6 +253,14 @@ section { width: 100%; }
     padding-top: 2rem;
 }
 
+.bloco-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    position: relative;
+}
+
 .menu-tags {
     display: flex;
     justify-content: center;
@@ -286,14 +294,17 @@ section { width: 100%; }
     scroll-snap-type: x mandatory; 
     gap: 30px;
     padding: 20px 0; 
-    position: relative; 
-    
+    position: relative;     
+    width: 100%;     
     padding-left: calc(50% - 140px);
     padding-right: calc(50% - 140px);
     
     -ms-overflow-style: none;  
     scrollbar-width: none;  
 }
+
+.galeria-scroll::-webkit-scrollbar { display: none; }
+.galeria-scroll > * { scroll-snap-align: center; }
 
 .galeria-scroll::-webkit-scrollbar { display: none; }
 .galeria-scroll > * { scroll-snap-align: center; }
@@ -396,11 +407,11 @@ section { width: 100%; }
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 25px;
+    margin-top: 30px; 
     position: relative;
-    z-index: 2;
+    z-index: 5; 
     width: 100%; 
-    clear: both;
+    order: 3; 
 }
 
 .ponto {

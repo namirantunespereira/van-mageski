@@ -6,6 +6,7 @@
       <title>Van Mageski | Fine Line Tattoo</title>
       
       <link rel="stylesheet" href="assets/styles.css">
+      <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
       
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,10 +25,8 @@
       <header id="inicio" class="secao-capa">
           <div class="conteudo-capa">
               <h1>Van Mageski</h1>
-              
               <p class="frase-menor">Arte, Tattoo & Essência</p> 
               <p class="frase-maior">Fine Line & Arte na Pele</p>
-              
               <a href="#portfolio" class="botao-destaque">Conheça meu trabalho</a>
           </div>
       </header>
@@ -37,9 +36,7 @@
             
             <div class="container-texto">
                 <h2>Sobre Mim</h2> 
-                
                 <p>Texto autoral sobre a conexão com a arte, o remo e a natureza. Aqui o texto fica alinhado à esquerda para facilitar a leitura, mas a caixa principal continua flutuando lindamente no centro da página, criando um visual editorial de revista.</p>
-                
                 <div class="redes-sociais-sobre">
                     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -70,18 +67,17 @@
                         <source src="assets/img/video1.mp4" type="video/mp4">
                     </video>
                 </div>
-                
                 <div class="card-video" data-categoria="cover-up">
                     <video autoplay muted loop playsinline>
                         <source src="assets/img/video2.mp4" type="video/mp4">
                     </video>
                 </div>
-                
                 <div class="card-video" data-categoria="sketch">
                     <video autoplay muted loop playsinline>
                         <source src="assets/img/video3.mp4" type="video/mp4">
                     </video>
-                </div>
+                </div>     
+            </div>
             
             <div class="pontinhos"></div>
             
@@ -105,7 +101,6 @@
                 </div>
                 <p>"O traço é impecável e a mão super leve. A Van é uma artista incrível, amei a experiência do início ao fim!"</p>
             </div>
-
             <div class="card-depoimento">
                 <div class="cabecalho-cliente">
                     <div class="foto-cliente"></div>
@@ -118,7 +113,6 @@
                 </div>
                 <p>"Minha primeira tatuagem e não poderia ter escolhido profissional melhor. O fineline dela é perfeito!"</p>
             </div>
-
             <div class="card-depoimento">
                 <div class="cabecalho-cliente">
                     <div class="foto-cliente"></div>
@@ -134,14 +128,12 @@
         </div>
         
         <div class="pontinhos"></div>
-        
       </section>
 
       <footer id="contato" class="secao-contato">
           <h2>Vamos criar algo único?</h2>
           <div class="ornamento">✧ ✧ ✧</div>
           <p>Orçamentos e Agendamentos via WhatsApp</p>          
-          
           <div class="rodape-creditos">
               <p>Vila Velha - ES | Política de Privacidade</p>
           </div>
@@ -155,9 +147,9 @@
       </a>
 
       <script>
+        // 1. LÓGICA DO FILTRO (Portfólio)
         const botoesFiltro = document.querySelectorAll('.btn-tag');
-        const cardsPortfolio = document.querySelectorAll('#portfolio .card-video');
-        const galeriaPortfolio = document.querySelector('#portfolio .galeria-scroll');
+        const secaoPortfolio = document.querySelector('#portfolio');
 
         botoesFiltro.forEach(botao => {
             botao.addEventListener('click', () => {
@@ -165,6 +157,7 @@
                 botao.classList.add('ativo');
 
                 const alvo = botao.getAttribute('data-alvo');
+                const cardsPortfolio = secaoPortfolio.querySelectorAll('.card-video');
 
                 cardsPortfolio.forEach(card => {
                     if (alvo === 'todos' || card.getAttribute('data-categoria') === alvo) {
@@ -174,64 +167,91 @@
                     }
                 });
 
-                galeriaPortfolio.scrollTo({ left: 0, behavior: 'smooth' });
-                iniciarCarrossel(document.querySelector('.bloco-portfolio'));
+                const galeriaPortfolio = secaoPortfolio.querySelector('.galeria-scroll');
+                if(galeriaPortfolio) galeriaPortfolio.scrollTo({ left: 0, behavior: 'smooth' });
+                
+                iniciarCarrossel(secaoPortfolio, '.card-video');
             });
         });
 
-        function iniciarCarrossel(secao) {
+        // 2. LÓGICA DO CARROSSEL
+        function iniciarCarrossel(secao, classeDoCard) {
             const galeria = secao.querySelector('.galeria-scroll');
             const containerPontinhos = secao.querySelector('.pontinhos');
             if (!galeria || !containerPontinhos) return;
 
-            const cardsVisiveis = Array.from(galeria.children).filter(card => card.style.display !== 'none');
+            const cards = Array.from(galeria.querySelectorAll(classeDoCard));
+            const cardsVisiveis = cards.filter(card => card.style.display !== 'none');
             
             containerPontinhos.innerHTML = ''; 
             let currentIndex = 0;
 
-            const scrollParaCard = (index) => {
-                if(!cardsVisiveis[index]) return;
-                const scrollPosition = cardsVisiveis[index].offsetLeft - galeria.offsetLeft - (galeria.clientWidth - cardsVisiveis[index].clientWidth) / 2;
+            if(cardsVisiveis.length === 0) return;
+
+            const irParaCard = (index) => {
+                const card = cardsVisiveis[index];
+                if(!card) return;
+                
+                const centroDaGaleria = galeria.clientWidth / 2;
+                const metadeDoCard = card.clientWidth / 2;
+                const scrollPosition = card.offsetLeft - centroDaGaleria + metadeDoCard;
+                
                 galeria.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+
+                const bolinhas = containerPontinhos.querySelectorAll('.ponto');
+                bolinhas.forEach(b => b.classList.remove('ativo'));
+                if(bolinhas[index]) bolinhas[index].classList.add('ativo');
             };
 
+            // Desenha as bolinhas na tela
             cardsVisiveis.forEach((_, i) => {
                 const bolinha = document.createElement('div');
-                bolinha.classList.add('ponto');
-                if (i === 0) bolinha.classList.add('ativo');
-                
+                bolinha.className = i === 0 ? 'ponto ativo' : 'ponto';
                 bolinha.addEventListener('click', () => {
                     currentIndex = i;
-                    scrollParaCard(currentIndex);
+                    irParaCard(currentIndex);
                 });
                 containerPontinhos.appendChild(bolinha);
             });
 
-            const bolinhas = containerPontinhos.querySelectorAll('.ponto');
-
+            let timeoutScroll;
             galeria.addEventListener('scroll', () => {
-                if(cardsVisiveis.length === 0) return;
-                let indexAtual = Math.round(galeria.scrollLeft / cardsVisiveis[0].offsetWidth);
-                bolinhas.forEach(b => b.classList.remove('ativo'));
-                if(bolinhas[indexAtual]) {
-                    bolinhas[indexAtual].classList.add('ativo');
-                    currentIndex = indexAtual;
-                }
+                clearTimeout(timeoutScroll);
+                timeoutScroll = setTimeout(() => {
+                    let centroGaleria = galeria.scrollLeft + (galeria.clientWidth / 2);
+                    let minDistance = Infinity;
+                    let closestIndex = 0;
+
+                    cardsVisiveis.forEach((card, i) => {
+                        let centroCard = card.offsetLeft + (card.clientWidth / 2);
+                        let distance = Math.abs(centroGaleria - centroCard);
+                        if(distance < minDistance) {
+                            minDistance = distance;
+                            closestIndex = i;
+                        }
+                    });
+
+                    currentIndex = closestIndex;
+                    const bolinhas = containerPontinhos.querySelectorAll('.ponto');
+                    bolinhas.forEach(b => b.classList.remove('ativo'));
+                    if(bolinhas[currentIndex]) bolinhas[currentIndex].classList.add('ativo');
+                }, 150); 
             });
 
             if(secao.intervaloLoop) clearInterval(secao.intervaloLoop);
-            
             secao.intervaloLoop = setInterval(() => {
                 if(cardsVisiveis.length <= 1) return;
                 currentIndex++;
-                if (currentIndex >= cardsVisiveis.length) { currentIndex = 0; }
-                scrollParaCard(currentIndex);
+                if (currentIndex >= cardsVisiveis.length) currentIndex = 0;
+                irParaCard(currentIndex);
             }, 3500);
         }
 
-        document.querySelectorAll('.bloco-portfolio, #depoimentos').forEach(secao => {
-            iniciarCarrossel(secao);
-        });
+        const portfolio = document.querySelector('#portfolio');
+        if(portfolio) iniciarCarrossel(portfolio, '.card-video');
+
+        const depoimentos = document.querySelector('#depoimentos');
+        if(depoimentos) iniciarCarrossel(depoimentos, '.card-depoimento');
       </script>
 
   </body>
