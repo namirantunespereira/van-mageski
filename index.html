@@ -10,6 +10,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
 
@@ -23,67 +24,117 @@
       <header id="inicio" class="secao-capa">
           <div class="conteudo-capa">
               <h1>Van Mageski</h1>
-              <p>Fine Line & Arte na Pele</p>
+              
+              <p class="frase-menor">Arte, Tattoo & Essência</p> 
+              <p class="frase-maior">Fine Line & Arte na Pele</p>
+              
               <a href="#portfolio" class="botao-destaque">Conheça meu trabalho</a>
           </div>
       </header>
 
       <section id="sobre" class="secao-padrao">
-          <div class="container-texto">
-              <h2>A Trajetória</h2>
-              <div class="ornamento">✧ ✧ ✧</div>
-              <p>Texto autoral sobre a conexão com a arte, o remo e a natureza...</p>
-          </div>
+        <div class="sobre-wrapper">
+            
+            <div class="container-texto">
+                <h2>Sobre Mim</h2> 
+                
+                <p>Texto autoral sobre a conexão com a arte, o remo e a natureza. Aqui o texto fica alinhado à esquerda para facilitar a leitura, mas a caixa principal continua flutuando lindamente no centro da página, criando um visual editorial de revista.</p>
+                
+                <div class="redes-sociais-sobre">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="imagem-sobre"></div>
+
+        </div>
       </section>
 
       <section id="portfolio" class="secao-portfolio">
-          
-          <div class="bloco-portfolio">
-              <h3>Tatuagem Artística Autoral</h3>
-              <p class="subtitulo">Fine Line • Sketch • Mini Realismo</p>
-              
-              <div class="galeria-grid">
-                  
-                  <div class="card-video">
-                      <video autoplay muted loop playsinline>
-                          <source src="assets/img/video1.mp4" type="video/mp4">
-                          Seu navegador não suporta vídeos.
-                      </video>
-                  </div>
-
-                  <div class="card-video">
-                      <video autoplay muted loop playsinline>
-                          <source src="assets/img/video2.mp4" type="video/mp4">
-                      </video>
-                  </div>
-
-                  <div class="card-video">
-                      <video autoplay muted loop playsinline>
-                          <source src="assets/img/video3.mp4" type="video/mp4">
-                      </video>
-                  </div>
-
-              </div> </div>
-
-          <div class="bloco-portfolio destaque-fundo">
-              <h3>Estética e Paramédica</h3>
-              <p class="subtitulo">Reconstrução • Camuflagem • Autoestima</p>
-              
-              <div class="galeria-grid">
-                  <div class="foto-exemplo">Foto 4</div>
-                  <div class="foto-exemplo">Foto 5</div>
-              </div>
-          </div>
-
+        <div class="bloco-portfolio">
+            
+            <div class="menu-tags">
+                <button class="btn-tag ativo" data-alvo="todos">Todos</button>
+                <button class="btn-tag" data-alvo="fineline">Fineline</button>
+                <button class="btn-tag" data-alvo="mini-realismo">Mini realismo</button>
+                <button class="btn-tag" data-alvo="sketch">Sketch</button>
+                <button class="btn-tag" data-alvo="cover-up">Cover Up</button>
+                <button class="btn-tag" data-alvo="paramedica">Paramédica</button>
+            </div>
+            
+            <div class="galeria-scroll">
+                <div class="card-video" data-categoria="fineline">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/img/video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="card-video" data-categoria="cover-up">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/img/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="card-video" data-categoria="sketch">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/img/video3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            
+            <div class="pontinhos"></div>
+            
+        </div>
       </section>
 
       <section id="depoimentos" class="secao-padrao">
-          <h2>O que dizem os clientes</h2>
-          <div class="ornamento">✧ ✧ ✧</div>
-          <div class="depoimento-card">
-              <p>"O traço é impecável e a mão super leve. Amei a experiência!"</p>
-              <span>- Cliente Exemplo</span>
-          </div>
+        <h2>O que dizem os clientes</h2>
+        <div class="ornamento">✧ ✧ ✧</div>
+        
+        <div class="galeria-scroll">
+            <div class="card-depoimento">
+                <div class="cabecalho-cliente">
+                    <div class="foto-cliente"></div> 
+                    <div class="info-cliente">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="nome-cliente">Maria Silva</span>
+                    </div>
+                </div>
+                <p>"O traço é impecável e a mão super leve. A Van é uma artista incrível, amei a experiência do início ao fim!"</p>
+            </div>
+
+            <div class="card-depoimento">
+                <div class="cabecalho-cliente">
+                    <div class="foto-cliente"></div>
+                    <div class="info-cliente">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="nome-cliente">Ana Costa</span>
+                    </div>
+                </div>
+                <p>"Minha primeira tatuagem e não poderia ter escolhido profissional melhor. O fineline dela é perfeito!"</p>
+            </div>
+
+            <div class="card-depoimento">
+                <div class="cabecalho-cliente">
+                    <div class="foto-cliente"></div>
+                    <div class="info-cliente">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="nome-cliente">Julia R.</span>
+                    </div>
+                </div>
+                <p>"Fiz uma cobertura (cover up) e o resultado superou todas as minhas expectativas. Recomendo de olhos fechados."</p>
+            </div>
+        </div>
+        
+        <div class="pontinhos"></div>
+        
       </section>
 
       <footer id="contato" class="secao-contato">
@@ -92,15 +143,96 @@
           <p>Orçamentos e Agendamentos via WhatsApp</p>          
           
           <div class="rodape-creditos">
-              <p>Localização | Política de Privacidade</p>
+              <p>Vila Velha - ES | Política de Privacidade</p>
           </div>
       </footer>
-        <a href="https://wa.me/5527999930338" class="btn-whatsapp" target="_blank" title="Agendar Tatuagem">
+      
+      <a href="https://wa.me/5527999930338" class="btn-whatsapp" target="_blank" title="Agendar Tatuagem">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.472 14.382C17.112 14.192 15.341 13.313 15.006 13.193C14.673 13.072 14.43 13.012 14.187 13.373C13.945 13.732 13.245 14.542 13.033 14.781C12.82 15.021 12.608 15.051 12.247 14.871C11.887 14.69 10.726 14.305 9.35104 13.069C8.25804 12.086 7.51904 10.871 7.30604 10.512C7.09404 10.151 7.28404 9.95401 7.46404 9.77401C7.62504 9.61301 7.82204 9.35201 8.00304 9.14301C8.18504 8.93201 8.24504 8.78201 8.36604 8.54201C8.48804 8.30201 8.42704 8.09201 8.33604 7.91201C8.24504 7.73201 7.51804 5.92201 7.21504 5.19201C6.92004 4.48201 6.62104 4.58101 6.38804 4.59101C6.17304 4.60101 5.93004 4.60101 5.68804 4.60101C5.44504 4.60101 5.05104 4.69201 4.71704 5.05201C4.38304 5.41201 3.44204 6.28201 3.44204 8.05201C3.44204 9.82201 4.74704 11.532 4.92904 11.772C5.11104 12.012 7.62504 15.863 11.474 17.505C15.323 19.147 15.323 18.665 16.021 18.605C16.719 18.544 18.266 17.674 18.599 16.744C18.933 15.813 18.933 15.003 18.841 14.853C18.751 14.703 18.538 14.622 18.178 14.442H17.472V14.382ZM12.001 21.999C6.47804 21.999 1.99904 17.521 1.99904 12C1.99904 6.47901 6.47804 2.00001 12.001 2.00001C17.523 2.00001 22.001 6.47901 22.001 12C22.001 17.521 17.523 21.999 12.001 21.999Z" fill="white"/>
             </svg>
             <span>Agendar</span>
-        </a>
+      </a>
+
+      <script>
+        const botoesFiltro = document.querySelectorAll('.btn-tag');
+        const cardsPortfolio = document.querySelectorAll('#portfolio .card-video');
+        const galeriaPortfolio = document.querySelector('#portfolio .galeria-scroll');
+
+        botoesFiltro.forEach(botao => {
+            botao.addEventListener('click', () => {
+                botoesFiltro.forEach(b => b.classList.remove('ativo'));
+                botao.classList.add('ativo');
+
+                const alvo = botao.getAttribute('data-alvo');
+
+                cardsPortfolio.forEach(card => {
+                    if (alvo === 'todos' || card.getAttribute('data-categoria') === alvo) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                galeriaPortfolio.scrollTo({ left: 0, behavior: 'smooth' });
+                iniciarCarrossel(document.querySelector('.bloco-portfolio'));
+            });
+        });
+
+        function iniciarCarrossel(secao) {
+            const galeria = secao.querySelector('.galeria-scroll');
+            const containerPontinhos = secao.querySelector('.pontinhos');
+            if (!galeria || !containerPontinhos) return;
+
+            const cardsVisiveis = Array.from(galeria.children).filter(card => card.style.display !== 'none');
+            
+            containerPontinhos.innerHTML = ''; 
+            let currentIndex = 0;
+
+            const scrollParaCard = (index) => {
+                if(!cardsVisiveis[index]) return;
+                const scrollPosition = cardsVisiveis[index].offsetLeft - galeria.offsetLeft - (galeria.clientWidth - cardsVisiveis[index].clientWidth) / 2;
+                galeria.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+            };
+
+            cardsVisiveis.forEach((_, i) => {
+                const bolinha = document.createElement('div');
+                bolinha.classList.add('ponto');
+                if (i === 0) bolinha.classList.add('ativo');
+                
+                bolinha.addEventListener('click', () => {
+                    currentIndex = i;
+                    scrollParaCard(currentIndex);
+                });
+                containerPontinhos.appendChild(bolinha);
+            });
+
+            const bolinhas = containerPontinhos.querySelectorAll('.ponto');
+
+            galeria.addEventListener('scroll', () => {
+                if(cardsVisiveis.length === 0) return;
+                let indexAtual = Math.round(galeria.scrollLeft / cardsVisiveis[0].offsetWidth);
+                bolinhas.forEach(b => b.classList.remove('ativo'));
+                if(bolinhas[indexAtual]) {
+                    bolinhas[indexAtual].classList.add('ativo');
+                    currentIndex = indexAtual;
+                }
+            });
+
+            if(secao.intervaloLoop) clearInterval(secao.intervaloLoop);
+            
+            secao.intervaloLoop = setInterval(() => {
+                if(cardsVisiveis.length <= 1) return;
+                currentIndex++;
+                if (currentIndex >= cardsVisiveis.length) { currentIndex = 0; }
+                scrollParaCard(currentIndex);
+            }, 3500);
+        }
+
+        document.querySelectorAll('.bloco-portfolio, #depoimentos').forEach(secao => {
+            iniciarCarrossel(secao);
+        });
+      </script>
 
   </body>
 </html>
